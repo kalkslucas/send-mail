@@ -55,7 +55,7 @@ $mail = new PHPMailer(true);
 
 try {
   //Server settings
-  $mail->SMTPDebug  = false;    //SMTP::DEBUG_SERVER;                     //Enable verbose debug output
+  $mail->SMTPDebug  = false;    //SMTP::DEBUG_SERVER;         //Enable verbose debug output
   $mail->isSMTP();                                            //Send using SMTP
   $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
   $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -77,7 +77,6 @@ try {
   //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
   //Content
-
   $mail->isHTML(true);                                  //Set email format to HTML
   $mail->Subject = $mensagem->__get('assunto');         //Assunto do E-mail
   $mail->Body    = $mensagem->__get('mensagem');        //Corpo do e-mail no padrão HTML
